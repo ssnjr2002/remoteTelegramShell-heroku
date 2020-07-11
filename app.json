@@ -1,0 +1,28 @@
+{
+    "name": "remoteTelegramShell-heroku",
+    "description": "Heroku edition of github.com/EnriqueMoran/remoteTelegramShell",
+    "keywords": ["shell", "telegram", "docker", "bot"],
+    "repository": "https://github.com/ssnjrthegr8/remoteTelegramShell-heroku.git",
+    "stack": "container",
+    "env": {
+      "BOT_TOKEN": {
+        "description": "This is bot auth token, necessary to connect bot to Telegram device.",
+        "required":  "true"
+      },
+      "PASSWD": {
+        "description": "For authentication.",
+        "required":  "true"
+      },
+      "LOG_LIMIT": {
+        "description": "Number of stored lines on log.txt. Default value is 500.",
+        "required":  "true",
+        "value": "500"
+      },
+      "ROOT": {
+        "description": "Allow root access, default value is 'False' (disabled) Set it to 'True' to enable. It's mostly useless in heroku.",
+        "required":  "true",
+        "value": "False"
+      }
+    }
+  }
+  
